@@ -155,7 +155,7 @@ const HomepageLayout = () => (
                 </Grid.Row>
                 <Grid.Row>
                     <Grid.Column textAlign='center'>
-                        <Button size='huge'>Contribute</Button>
+                        <Button primary size='huge' href='/campaigns'>Contribute</Button>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
@@ -169,7 +169,7 @@ const HomepageLayout = () => (
             </Header>
                         <p style={{ fontSize: '1.33em' }}>Hydrodynamic and ergonomic, our CNF LANYARD will always stay on your hips no matter what!
 After the success of our carbon noseclip earlier this year, we are now happy to introduce our new Octopus CNF lanyard (and belt)!</p>
-                        <Button primary size='huge'>Contribute</Button>
+                        <Button primary size='huge' href='/campaigns'>Contribute</Button>
                     </Grid.Column>
                     <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
                         

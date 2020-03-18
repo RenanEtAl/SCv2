@@ -24,7 +24,7 @@ const CreateCampaign = ({ history, acc }) => {
                 .send({
                     from: acc.account
                 });
- 
+
             const campaigns = await factory.methods.getDeployedCampaigns().call()
             console.log(campaigns.slice(-1).pop());
             axios.post('http://localhost:8080/create', {
@@ -49,30 +49,34 @@ const CreateCampaign = ({ history, acc }) => {
             console.log(err)
             setLoading(false)
         }
-        setLoading(false)   
+        setLoading(false)
     }
 
     return (
         <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
-            <Grid.Column style={{ maxWidth: 450 }}>
+            <Grid.Column style={{ maxWidth: 1000 }}>
                 <Header as='h2' color='teal' textAlign='center'>
                     Create a Campaign
                 </Header>
-                <Form size='large' onSubmit={handleSubmit}>
+                <Form onSubmit={handleSubmit}>
                     <Segment stacked>
                         <Form.Input
-                            fluid icon='pencil' iconPosition='left' placeholder='Campaign Title'
+                            required label='Title' fluid icon='pencil' iconPosition='left' placeholder='Campaign Title'
                             value={title} onChange={e => setTitle(e.target.value)}
                         />
-                        <Form.Input
-                            fluid icon='pencil' iconPosition='left' placeholder='Campaign descriptionription'
+                        <Form.TextArea
+                            required size='ui massive form'
+                            style={{ minHeight: 200 }}
+                            label='Description' placeholder='Tell Us About Your Campaign'
                             value={description} onChange={e => setDescription(e.target.value)}
                         />
-                        <Form.Input
+                        <Form.Input                       
+                            required
+                            label='Minimum Contribution'
                             fluid
                             icon='money'
                             iconPosition='left'
-                            placeholder='Minimum Contribution in wei'
+                            placeholder='Minimum Contribution Allowed'
                             value={min}
                             onChange={e => setMin(e.target.value)}
                         />

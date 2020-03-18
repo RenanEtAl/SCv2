@@ -12,7 +12,7 @@ const Navbar = ({ acc }) => {
             <Menu fixed='top' inverted>
                 <Container>
                     <Menu.Item header>
-                        Safe Crowding
+                        SAFE CROWDFUNDING
                     </Menu.Item>
                     <Menu.Item as ='a' href='/'>
                         Home
@@ -21,7 +21,7 @@ const Navbar = ({ acc }) => {
                         Campaigns
                     </Menu.Item>
                     {acc.account && <Menu.Item as='a' href='/create'>
-                        Create
+                        Create a Campaign
                     </Menu.Item>}
                     {/* {
                         acc.account && <Menu.Item as='a' href='/#'>
@@ -29,7 +29,7 @@ const Navbar = ({ acc }) => {
                     </Menu.Item>
                     } */}
                     <Menu.Item position='right'>
-                        ID: &nbsp;
+                        Wallet ID: &nbsp;
                         {
                             acc.account && acc.account.substring(0, 10)
                         }
